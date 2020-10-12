@@ -117,15 +117,19 @@ p:last-child { margin-bottom: 0; }
     display: inline-block;
     padding: 1rem;
     text-decoration: none;
+    font-weight: 700;
+
+    transition: 0.2s linear color, 0.2s linear background;
+}
+
+.button__primary {
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-weight: 700;
+
+
     color: #fff;
     background-color: #28cf3c;
     
-
-    position: relative;
-
     transition: all 0.2s ease-in;
     transform-style: preserve-3d;
     transform: perspective( 200px ) rotateX( 5deg ) rotateY( 5deg );
@@ -136,10 +140,22 @@ p:last-child { margin-bottom: 0; }
     animation-play-state: running;
 }
 
-.button:hover {
+.button__primary:hover {
     transform: perspective( 0 ) rotateY( 0 );
     animation-play-state: paused;
     background-color: #00f11c;
+}
+
+.button__secondary {
+    color: #fff;
+    border: 1px solid #fff;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.button__secondary:hover {
+    color: #000;
+    background-color: #fff;
 }
 
 @media screen and (max-width: 1100px) {
